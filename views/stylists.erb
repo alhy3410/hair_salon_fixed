@@ -1,0 +1,10 @@
+<h2>Here are the list of stylists:</h2>
+
+<ul>
+<% @stylists.each() do |stylist| %>
+<li><a href='/hairsalon/stylists/<%=stylist.id()%>/clients/new'><%= stylist.name() %></li>
+<% end %>
+</ul>
+
+
+<a href='/hairsalon/stylists/new'>Add New Stylist</a>
