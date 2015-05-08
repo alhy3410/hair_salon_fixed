@@ -12,7 +12,7 @@ class Clients
     all_clients.each() do |client|
       name = client.fetch('name')
       id = client.fetch('id').to_i()
-      clients_list.push(Clients.new({:name => name}))
+      clients_list.push(Clients.new({:name => name, :id => id}))
     end
     clients_list
   end
@@ -24,6 +24,16 @@ class Clients
 
   define_method(:==) do |another_client|
     self.name().==(another_client.name())
+  end
+
+  define_singleton_method(:find) do |id|
+    found_client = nil
+    Clients.all().each() do |client|
+      if client.id().==(id)
+        found_client = client
+      end
+    end
+    found_client
   end
 
 end
