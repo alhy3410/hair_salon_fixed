@@ -32,4 +32,12 @@ describe('Clients') do
     end
   end
 
+  describe('#update') do
+    it('will update the info in the clients database') do
+      new_client = Clients.new({:name => "Tom Ford"})
+      new_client.save()
+      new_client.update({:name => "Robert Jones"})
+      expect(new_client.name()).to(eq("Robert Jones"))
+    end
+  end
 end

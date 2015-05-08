@@ -4,7 +4,7 @@ class Clients
   define_method(:initialize) do |attributes|
     @name = attributes[:name]
     @id = attributes[:id]
-    @stylists_id = attributes[:stylists_id] ||= "NULL" 
+    @stylists_id = attributes[:stylists_id] ||= "NULL"
   end
 
   define_singleton_method(:all) do
@@ -37,5 +37,13 @@ class Clients
     end
     found_client
   end
+
+  define_method(:update) do |attributes|
+    @name = attributes.fetch(:name, @name)
+    @id = self.id()
+    DB.exec("UPDATE clients SET name = '#{@name}' WHERE id = #{@id};")
+  end
+
+
 
 end
