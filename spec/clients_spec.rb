@@ -40,4 +40,14 @@ describe('Clients') do
       expect(new_client.name()).to(eq("Robert Jones"))
     end
   end
+
+  describe('#delete') do
+    it('will delete the record from the database') do
+      new_client = Clients.new({:name => "Jim Jones"})
+      new_client.save()
+      new_client.delete()
+      expect(Clients.all()).to(eq([]))
+    end
+  end
+
 end

@@ -50,6 +50,15 @@ describe('Stylists') do
       expect(new_stylist.name()).to(eq("Jim Jones"))
     end
   end
-  
 
+  describe('#delete') do
+    it('will delete the record from the database') do
+      new_stylist = Stylists.new({:name => "James Bond"})
+      new_stylist.save()
+      new_stylist2 = Stylists.new({:name => "James Rond"})
+      new_stylist2.save()
+      new_stylist.delete()
+      expect(Stylists.all()).to(eq([new_stylist2]))
+    end
+  end
 end
