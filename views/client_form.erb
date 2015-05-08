@@ -1,6 +1,7 @@
-<form action ='/hairsalon/stylists/<%=@stylist.id()%>/clients' method="post">
+<h1> Enter in Clients Here</h1>
+<form action ='/stylists/<%=@stylist.id()%>/clients' method='post'>
   <div class ='form-group'>
-    <input id='stylist_id' name='stylist_id' type='hidden' value='<%= @stylist.id()%>'>
+    <input id='id' name='id' type='hidden' value='<%= @stylist.id()%>'>
     <input id='name' name='name' type='text'>
     <label for='name'>Enter in the name of the Client:</label>
     <button type='submit'>Add Client</button>

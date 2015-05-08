@@ -2,9 +2,9 @@
 
 <ul>
 <% @stylists.each() do |stylist| %>
-<li><a href='/hairsalon/stylists/<%=stylist.id()%>/clients/new'><%= stylist.name() %></li>
+<li><a href='/stylists/<%=stylist.id()%>/clients/new'><%= stylist.name() %></li>
 <% end %>
 </ul>
 
 
-<a href='/hairsalon/stylists/new'>Add New Stylist</a>
+<a href='/stylists/new'>Add New Stylist</a>
