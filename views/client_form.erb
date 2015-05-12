@@ -1,7 +1,7 @@
 <h1> Enter in Clients Here</h1>
-<form action ='/stylists/<%=@stylist.id()%>/clients' method='post'>
+<form action ='/stylists/<%=@stylists.id()%>/list_clients' method='post'>
   <div class ='form-group'>
-    <input id='id' name='id' type='hidden' value='<%= @stylist.id()%>'>
+    <input id='id' name='id' type='hidden' value='<%= @stylists.id()%>'>
     <input id='name' name='name' type='text'>
     <label for='name'>Enter in the name of the Client:</label>
     <button type='submit'>Add Client</button>
