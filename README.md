@@ -30,4 +30,4 @@
 #Bug reports: <p>There are currently no known bugs to salon.  Any discovered bugs should be reported
 directly to the programs creator at andrewlhy@gmail.com</p>
 #Licenses and Copywright info: <p>andrewlhy License.  Copyright 2015 andrewlhy industries.</p>
-#<h2>You are not granted rights or licenses to the trademarks of andrewlhy industries without the express written consent of andrewlhy industries.</h2>
+
